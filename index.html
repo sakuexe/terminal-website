@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saku Karttunen - Terminal</title>
+    <script src="./js/mainscript.js" defer></script>
+</head>
+<body style="background-color: black; color: blanchedalmond;">
+    <main>
+        <output></output>
+        <label for="terminal-input">sakukarttunen.com:<span style="color: green;">home</span>$~</label>
+        <input type="text" name="terminal-input" id="terminal-input" autofocus autocomplete="off"
+        onkeypress="enterCommand(event)" onblur="keepFocus(this)">
+    </main>
+</body>
+</html>
