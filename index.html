@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saku Karttunen - Terminal</title>
+    <script src="./js/commands.js"></script>
     <script src="./js/mainscript.js" defer></script>
-    <link rel="stylesheet" href="./css/output.css">
+    <script src="./js/print.js"></script>
+    <link rel="stylesheet" href="./css/output.css" />
 </head>
-<body class="bg-black text-neutral-100 text-lg">
-    <main class="p-5">
-        <output></output>
-        <label for="terminal-input">User@<span class="text-green-500">dev.sakukarttunen.com</span>$~</label>
-        <input type="text" name="terminal-input" id="terminal-input" autofocus autocomplete="off"
-        onkeypress="enterCommand(event)" onblur="keepFocus(this)"
-        class="bg-transparent">
+
+<body class="bg-mutedBlack text-neutral-100 text-lg font-monospace">
+    <main class="p-5 mb-10 md:mb-32">
+        <output class="sm:whitespace-pre block text-mutedOrange"></output>
+        <div class="flex">
+            <label for="terminal-input" class="text-mutedPurple">
+                user@dev.sakukarttunen.com$~
+            </label>
+            <input type="text" name="terminal-input" id="terminal-input" autofocus autocomplete="off"
+                onkeypress="enterCommand(event)" onblur="keepFocus(this)"
+                class="bg-transparent command px-2 w-full caret-mutedOrange focus-within:outline-none"
+            />
+        </div>
     </main>
 </body>
+
 </html>
