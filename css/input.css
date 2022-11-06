@@ -12,14 +12,18 @@ npx tailwindcss -o build.css --minify
 
 .command {
     @apply text-mutedTurqoise;
-    text-shadow: 0 0 8px #1dcbd1d8;
+    text-shadow: 0 0 8px #1dcbd1a6;
 }
 
 p {
     overflow: hidden;
     white-space: pre;
     display: block;
-    animation: typing 1s steps(40, end);
+    animation: typing .7s steps(40, end);
+}
+
+a {
+    @apply underline transition-all hover:brightness-75 active:brightness-50;
 }
 
 @keyframes typing {

@@ -6,7 +6,6 @@ const gitHub = 'https://github.com/sakuexe'
 const website = 'https://sakukarttunen.com'
 
 const banner = [
-'<span class="text-mutedPurple">' +
 "          ___   ____",
 "        /' --;^/ ,-_\\     \\ | /"                                             ,
 "       / / --o\\ o-\\ \\\\   --(_)--"                                          ,
@@ -18,20 +17,22 @@ const banner = [
 "          ...|-|\\--,\\_....'              \\__ \\/ _` | / / || | ' < ",
 "      ,;;;;;;;;;;;;;;;;;;;;;;;;,.'       |___/\\__,_|_\\_\\\\_,_|_|\\_\\ &copy;2022",
 '~~,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
-'</span>',
-'Welcome to my interactive terminal.',
-'For a list of available commands, type <span class="command">"help"</span></span>',
+'<span class="text-mutedOrange">Welcome to my interactive terminal.</span>',
+'<span class="text-mutedOrange">For a list of available commands, type <span class="command">"help"</span></span>',
 '<br>',
 ]
 
 const help = [
     '<br>',
-    'whois          Who is Saku Karttunen?',
-    'portfolio      View portfolio',
-    'projects       View coding projects',
-    'social         Check out my socials',
-    'help           I think you already know',
-    'jotain',
+    '<span class="command">whois</span>          Who is Saku Karttunen?',
+    '<span class="command">portfolio</span>      View portfolio',
+    '<span class="command">projects</span>       View coding projects',
+    '<span class="command">social</span>         Check out my socials',
+    '<span class="command">help</span>           You figured it out',
+    '<span class="command">ls</span>             File directory',
+    '<span class="command">reboot</span>         Refresh terminal',
+    '<span class="command">history</span>        Print command history',
+    '<span class="command">banner</span>         Print banner again',
     '<br>',
 ]
 
@@ -89,3 +90,7 @@ const error = (cmd) => {
     `Try typing <span class="command">'help'</span> to see available commands`,
     ]
 }
+
+let history = [
+
+]

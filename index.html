@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saku Karttunen - Terminal</title>
-    <script src="./js/commands.js"></script>
+    <script src="./js/commands.js" defer></script>
+    <script src="./js/print.js" defer></script>
     <script src="./js/mainscript.js" defer></script>
-    <script src="./js/print.js"></script>
     <link rel="stylesheet" href="./css/output.css" />
 </head>
 
-<body class="bg-mutedBlack text-neutral-100 text-lg font-monospace">
+<body class="bg-mutedBlack text-neutral-100 font-monospace">
     <main class="p-5 mb-10 md:mb-32">
         <output class="sm:whitespace-pre block text-mutedOrange"></output>
         <div class="flex">
@@ -19,7 +19,7 @@
                 user@dev.sakukarttunen.com$~
             </label>
             <input type="text" name="terminal-input" id="terminal-input" autofocus autocomplete="off"
-                onkeypress="enterCommand(event)" onblur="keepFocus(this)"
+                onkeypress="enterCommand(event)" onblur="keepFocus(this)" onkeydown="historyCheck(event)"
                 class="bg-transparent command px-2 w-full caret-mutedOrange focus-within:outline-none"
             />
         </div>

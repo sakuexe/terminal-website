@@ -561,8 +561,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.mb-20{
-  margin-bottom: 5rem;
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .block{
@@ -603,11 +603,6 @@ video {
   font-family: Roboto Mono;
 }
 
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-neutral-100{
   --tw-text-opacity: 1;
   color: rgb(245 245 245 / var(--tw-text-opacity));
@@ -635,15 +630,32 @@ npx tailwindcss -o build.css --minify
 .command{
   --tw-text-opacity: 1;
   color: rgb(52 160 164 / var(--tw-text-opacity));
-  text-shadow: 0 0 8px #1dcbd1d8;
+  text-shadow: 0 0 8px #1dcbd1a6;
 }
 
 p {
   overflow: hidden;
   white-space: pre;
   display: block;
-  -webkit-animation: typing 1s steps(40, end);
-          animation: typing 1s steps(40, end);
+  -webkit-animation: typing .7s steps(40, end);
+          animation: typing .7s steps(40, end);
+}
+
+a{
+  text-decoration-line: underline;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+a:hover{
+  --tw-brightness: brightness(.75);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+a:active{
+  --tw-brightness: brightness(.5);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 @-webkit-keyframes typing {

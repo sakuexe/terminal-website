@@ -1,3 +1,4 @@
+
 const termInput = document.querySelector('#terminal-input')
 const termOutput = document.querySelector('output')
 
@@ -39,7 +40,7 @@ function enterCommand(keypress) {
             printOut(projects)
             break
 
-        case 'socials':
+        case 'social':
             printOut(socials)
             break
 
@@ -59,11 +60,20 @@ function enterCommand(keypress) {
             termOutput.innerHTML += ''
             break
 
+        case 'banner':
+            printOut(banner)
+            break
+
+        case 'history':
+            printOut(history)
+            break
+
         default:
             printOut(error(cmd))
     }
 
     termInput.value = ''
+    history.push(cmd)
 }
 
-termOutput.innerHTML = banner.join('\n')
+printOut(banner)
