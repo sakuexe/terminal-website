@@ -24,11 +24,11 @@ const banner = [
 
 const help = [
     '<br>',
-    '<span class="command">whois</span>          Who is Saku Karttunen?',
+    '<span class="command">whois</span>          Who is SakuK?',
     '<span class="command">portfolio</span>      View portfolio',
     '<span class="command">projects</span>       View coding projects',
     '<span class="command">social</span>         Check out my socials',
-    '<span class="command">help</span>           You figured it out',
+    '<span class="command">help</span>           You figured it out, right?',
     '<span class="command">ls</span>             File directory',
     '<span class="command">reboot</span>         Refresh terminal',
     '<span class="command">history</span>        Print command history',
@@ -37,20 +37,44 @@ const help = [
 ]
 
 const whois = [
-    // TODO: update this text
     '<br>',
-    'I am Saku Karttunen and this is my updated website.',
+    'I am Saku Karttunen and this is my terminal website.',
+    'This website was designed to be a more dev-centered way of',
+    'presenting my skills and portfolio.',
     'From here you can find information about my professional career',
     'experiences, skills and prior works. I am a motivated towards',
     'becoming a developer in the field of programming.',
+    '<br>',
+    'I am currently studying at the University of Applied Sciences',
+    '<br>',
+    'about me:',
+    '- I was born in 2001 and I am currently living in Riihimäki, Finland',
+    '- I enjoy watching Formula 1, playing video games and drawing <span class="text-xs opacity-75">from time to time</span>',
+    '- My favorites:',
+    '   * Color: <span class="text-purple-800">Purple</span>',
+    '   * Programming language: JavaScript',
+    '   * IDE: Visual Studio Code (With the VIM plugin)',
+    '   * Games: Super Smash Brothers, Breath of the Wild and Persona 5 Royal',
     '<br>',
 ]
 
 const portfolio = [
     '<br>',
-    'Check out images of my previous works from my more traditional website:',
-    `<a href="${website + '/portfolio.html'}" target="_blank">From this link</a>`,
+    'Want to check out my portfolio from my traditional website?',
+    // `<a href="${website + '/portfolio.html'}" target="_blank">${website}</a>`,
+    '<span class="opacity-75">This will open the website on another tab.</span>',
+    '<span class="command">(y)</span>es or <span class="command">(n)</span>o?',
     '<br>',
+]
+
+const experience = [
+    '<br>',
+    'Here are some of my prior work experiences:',
+    '<br>',
+    'Freelance Graphic Designer and Web Developer',
+    '<span class="italic opacity-75">2019 - current</span>',
+    '   - I have been working as a freelance graphic designer and web developer',
+    '<br>'
 ]
 
 const projects = [
@@ -86,10 +110,18 @@ const directory = [
 
 const error = (cmd) => {
     return [
-    `Command for <span class="command">'${cmd}'</span> not found`,
-    `Try typing <span class="command">'help'</span> to see available commands`,
+    `Command for <span class="command">${cmd}</span> not found`,
+    `Try typing <span class="command">help</span> to see available commands`,
     ]
 }
+
+const sus = [
+    '<br>',
+    '<span class="text-neutral-600">*    .    ¨    o </span>',
+    '<span class="text-neutral-600">  .    <span class="text-red-600">ඞ</span>    .  ¨ </span',
+    '<span class="text-neutral-600"> ¨    ,       *</span>',
+    '<br>',
+]
 
 let history = [
 

@@ -40,7 +40,12 @@ function enterCommand(keypress) {
             printOut(projects)
             break
 
+        case 'experience':
+            printOut(experience)
+            break
+
         case 'social':
+        case 'socials':
             printOut(socials)
             break
 
@@ -48,11 +53,9 @@ function enterCommand(keypress) {
             printOut(directory)
             break
 
-        case 'refresh':
-            location.reload()
-            break
-
+        case 'reboot':
         case 'reload':
+        case 'refresh':
             location.reload()
             break
 
@@ -61,11 +64,36 @@ function enterCommand(keypress) {
             break
 
         case 'banner':
+        case 'ascii':
             printOut(banner)
             break
 
         case 'history':
             printOut(history)
+            break
+
+        case 'yes':
+        case 'ye':
+        case 'y':
+            // check if the last command was 'portfolio'
+            if (history.at(-1) !== 'portfolio'){
+                printOut(error(cmd))
+                break
+            }
+            // this part of the code will only run if the prompt
+            // of the portfolio was thrown before
+            window.open('https://sakukarttunen.com/portfolio.html', '_blank')
+            break
+
+        // * Easter eggs
+        case 'sus':
+            playSound('.sounds/sus-sound.mp3')
+            printOut(sus)
+            break
+
+        case 'sudo':
+            playSound('.sounds/chest-open.mp3', 1)
+            window.open('https://i.kym-cdn.com/photos/images/newsfeed/002/486/154/c06.gif', '_blank')
             break
 
         default:

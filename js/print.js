@@ -12,6 +12,17 @@ async function printOut(lines) {
     }
 }
 
+function playSound(sound, volume = 0.5) {
+    /* 
+        plays sound that is passed as argument.
+        e.g. playSound('./.sound/sound.mp3')
+        volume is an optional parameter, default is 0.5
+    */
+    let audio = new Audio(sound)
+    audio.volume = volume
+    audio.play()
+}
+
 let historyIndex = 0
 let historyLength = history.length
 

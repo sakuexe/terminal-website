@@ -603,6 +603,15 @@ video {
   font-family: Roboto Mono;
 }
 
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.italic{
+  font-style: italic;
+}
+
 .text-neutral-100{
   --tw-text-opacity: 1;
   color: rgb(245 245 245 / var(--tw-text-opacity));
@@ -618,8 +627,27 @@ video {
   color: rgb(159 134 192 / var(--tw-text-opacity));
 }
 
+.text-purple-800{
+  --tw-text-opacity: 1;
+  color: rgb(107 33 168 / var(--tw-text-opacity));
+}
+
+.text-neutral-600{
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity));
+}
+
+.text-red-600{
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .caret-mutedOrange{
   caret-color: #e08b40;
+}
+
+.opacity-75{
+  opacity: 0.75;
 }
 
 /*
