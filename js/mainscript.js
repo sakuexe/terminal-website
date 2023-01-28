@@ -20,28 +20,32 @@ function enterCommand(keypress) {
     termOutput.innerHTML += `<span class="text-mutedPurple">user@dev.sakukarttunen.com$~</span> <span class="command">${cmd}</span><br>`
 
     switch (cmd.toLowerCase()) {
-        case 'clear':
-            termOutput.innerHTML = ''
-            break
 
         case 'help':
             printOut(help)
             break
 
         case 'whois':
+        case 'sakuk':
+        case 'saku':
             printOut(whois)
+            break
+
+        case 'whoami':
+            printOut(whoami)
             break
 
         case 'portfolio':
             printOut(portfolio)
             break
 
-        case 'projects':
-            printOut(projects)
-            break
-
+        case 'exp':
         case 'experience':
             printOut(experience)
+            break
+
+        case 'projects':
+            printOut(projects)
             break
 
         case 'social':
@@ -59,8 +63,8 @@ function enterCommand(keypress) {
             location.reload()
             break
 
-        case '':
-            termOutput.innerHTML += ''
+        case 'history':
+            printOut(history)
             break
 
         case 'banner':
@@ -68,8 +72,8 @@ function enterCommand(keypress) {
             printOut(banner)
             break
 
-        case 'history':
-            printOut(history)
+        case 'clear':
+            termOutput.innerHTML = ''
             break
 
         case 'yes':
@@ -94,6 +98,11 @@ function enterCommand(keypress) {
         case 'sudo':
             playSound('./sounds/chest-open.mp3', 1)
             window.open('https://i.kym-cdn.com/photos/images/newsfeed/002/486/154/c06.gif', '_blank')
+            break
+
+        // empty command
+        case '':
+            termOutput.innerHTML += ''
             break
 
         default:
