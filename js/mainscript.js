@@ -87,12 +87,12 @@ function enterCommand(keypress) {
 
         // * Easter eggs
         case 'sus':
-            playSound('./.sounds/sus-sound.mp3')
+            playSound('./sounds/sus-sound.mp3')
             printOut(sus)
             break
 
         case 'sudo':
-            playSound('./.sounds/chest-open.mp3', 1)
+            playSound('./sounds/chest-open.mp3', 1)
             window.open('https://i.kym-cdn.com/photos/images/newsfeed/002/486/154/c06.gif', '_blank')
             break
 
