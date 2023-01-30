@@ -119,10 +119,10 @@ const projects = [
     'So I will be redirecting you over there for now:',
     `<a href="${gitHub}" target="_blank">github.com/sakuexe</a>`,
     'These projects include things such as:',
-    '- Python Scripting',
-    '- Web development',
-    '- Prior School Projects',
-    '- And some other sideprojects of mine',
+    '- Youtube video downloader, with Python3',
+    '- Personal Websites',
+    '- Some prior school course projects',
+    '- Others',
     '<br>'
 ]
 
