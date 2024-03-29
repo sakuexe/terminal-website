@@ -1,30 +1,29 @@
-
-const instagram = 'https://www.instagram.com/16bitmustache/'
+const instagram = 'https://www.instagram.com/saku.karttunen/'
 const facebook = 'https://www.facebook.com/saku.karttunen.1'
-const linkedIn = 'https://www.linkedin.com/in/saku-karttunen-a5b00120b/'
+const linkedIn = 'https://www.linkedin.com/in/sakukarttunen/'
 const gitHub = 'https://github.com/sakuexe'
 const website = 'https://sakukarttunen.com'
 
-const banner = [
-"          ___   ____",
-"        /' --;^/ ,-_\\     \\ | /"                                             ,
-"       / / --o\\ o-\\ \\\\   --(_)--"                                          ,
-"      /-/-/|o|-|\\-\\\\|\\\\   / | \\ "                                        ,
-"       '`  ` |-| '  ``",
-"             |-|'", 
-"             |-|O                         ___       _        _  __         ",
-"             |-(\\,__                     / __| __ _| |___  _| |/ / ",      
-"          ...|-|\\--,\\_....'              \\__ \\/ _` | / / || | ' < ",
-"      ,;;;;;;;;;;;;;;;;;;;;;;;;,.'       |___/\\__,_|_\\_\\\\_,_|_|\\_\\ &copy;2022",
-'~~,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
-'<span class="text-mutedOrange">Welcome to my interactive terminal.</span>',
-'<span class="text-mutedOrange">For a list of available commands, type <span class="command">"help"</span></span>',
-'<br>',
-]
-
-const help = [
+export const commands = {
+  banner: [
+    "          ___   ____",
+    "        /' --;^/ ,-_\\     \\ | /",
+    "       / / --o\\ o-\\ \\\\   --(_)--",
+    "      /-/-/|o|-|\\-\\\\|\\\\   / | \\ ",
+    "       '`  ` |-| '  ``",
+    "             |-|'",
+    "             |-|O                         ___       _        _  __         ",
+    "             |-(\\,__                     / __| __ _| |___  _| |/ / ",
+    "          ...|-|\\--,\\_....'              \\__ \\/ _` | / / || | ' < ",
+    "      ,;;;;;;;;;;;;;;;;;;;;;;;;,.'       |___/\\__,_|_\\_\\\\_,_|_|\\_\\ &copy;2022",
+    '~~,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
+    '<span class="text-mutedOrange">Welcome to my interactive terminal.</span>',
+    '<span class="text-mutedOrange">For a list of available commands, type <span class="command">"help"</span></span>',
     '<br>',
-    '<span class="command">whois</span>          Who is SakuK?',
+  ],
+  help: [
+    '<br>',
+    '<span class="command">whois</span>          Who is Saku?',
     '<span class="command">portfolio</span>      View portfolio',
     '<span class="command">experience</span>     Short list of work experience',
     '<span class="command">projects</span>       View coding projects',
@@ -36,9 +35,8 @@ const help = [
     '<span class="command">clear</span>          Clear terminal',
     '<span class="command">help</span>           You figured it out, right?',
     '<br>',
-]
-
-const whois = [
+  ],
+  whois: [
     '<br>',
     'I am Saku Karttunen and this is my terminal website.',
     'This website was designed to be a more dev-centered way of',
@@ -58,25 +56,22 @@ const whois = [
     '   * IDE: Visual Studio Code (With the VIM plugin)',
     '   * Games: Super Smash Brothers, Breath of the Wild and Persona 5 Royal',
     '<br>',
-]
-
-const whoami = [
+  ],
+  whoami: [
     '<br>',
     'Who are you? Wouldn\'t that be a question for yourself?',
     'In any case, I do appreciate you for visiting my website.',
     '<br>',
-]
-
-const portfolio = [
+  ],
+  portfiolio: [
     '<br>',
     'Want to check out my portfolio from my traditional website?',
     // `<a href="${website + '/portfolio.html'}" target="_blank">${website}</a>`,
     '<span class="opacity-75">This will open the website on another tab.</span>',
     '<span class="command">(y)</span>es or <span class="command">(n)</span>o?',
     '<br>',
-]
-
-const experience = [
+  ],
+  experience: [
     '<br>',
     'Here are some of my prior work experiences:',
     '<br>',
@@ -111,9 +106,8 @@ const experience = [
     '   And then as a full-time job. I worked there for the rest of the summer',
     '   after graduation and before starting my mandatory military service.',
     '<br>',
-]
-
-const projects = [
+  ],
+  projects: [
     '<br>',
     'My programming projects can be found most easily from my Github page.',
     'So I will be redirecting you over there for now:',
@@ -124,41 +118,28 @@ const projects = [
     '- Some prior school course projects',
     '- Others',
     '<br>'
-]
-
-const socials = [
+  ],
+  socials: [
     '<br>',
-    `Instagram:      <a href="${instagram}" target="_blank">instagram.com/16bitmustache</a>`,
+    `Instagram:      <a href="${instagram}" target="_blank">instagram.com/saku.karttunen</a>`,
     `Facebook:       <a href="${facebook}" target="_blank">facebook.com/saku.karttunen.1</a>`,
-    `LinkedIn:       <a href="${linkedIn}" target="_blank">linkedin.com/in/saku-karttunen-a5b00120b</a>`,
+    `LinkedIn:       <a href="${linkedIn}" target="_blank">linkedin.com/in/sakukarttunen</a>`,
     `GitHub:         <a href="${gitHub}" target="_blank">github.com/sakuexe</a>`,
     '<br>',
-]
-
-const directory = [
+  ],
+  ls: [
     '<br>',
     'drw-rw-r-- 1   sakuk   512     css/',
     'drw-rw-r-- 1   sakuk   512     js/',
     'drw-rwxr-- 1   sakuk   512     tailwind/',
     '-rw-rw-r-- 1   sakuk   1028    index.html',
     '<br>',
-]
-
-const error = (cmd) => {
-    return [
-    `Command for <span class="command">${cmd}</span> not found`,
-    `Try typing <span class="command">help</span> to see available commands`,
-    ]
-}
-
-const sus = [
+  ],
+  sus: [
     '<br>',
     '<span class="text-neutral-600">*    .    ¨    o </span>',
     '<span class="text-neutral-600">  .    <span class="text-red-600">ඞ</span>    .  ¨ </span',
     '<span class="text-neutral-600"> ¨    ,       *</span>',
     '<br>',
-]
-
-let history = [
-
-]
+  ],
+}

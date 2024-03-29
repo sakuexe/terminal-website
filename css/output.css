@@ -637,6 +637,11 @@ video {
   opacity: 0.75;
 }
 
+.blur{
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 /*
 When finishing use this command to minimize css size:
 npx tailwindcss -o build.css --minify  
