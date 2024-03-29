@@ -1,5 +1,5 @@
 import { commands } from './commands.js'
-import { printOutput } from './print.js'
+import { printOutput, printHelp } from './print.js'
 import { getFromHistory } from './history.js'
 
 const termInput = document.querySelector('#terminal-input')
@@ -19,10 +19,15 @@ function enterCommand() {
   const stdin = termInput.value.toLowerCase().trim()
   const command = commands[stdin]
   termInput.value = ''
+  if (command === commands.help) {
+    printHelp()
+    return
+  }
   if (command) {
     printOutput(command, stdin)
     return
   }
+  console.log(stdin)
   // special functions or easter eggs if you may
   switch (stdin) {
     case "sudo":
