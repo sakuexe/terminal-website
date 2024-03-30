@@ -3,6 +3,7 @@ const facebook = 'https://www.facebook.com/saku.karttunen.1'
 const linkedIn = 'https://www.linkedin.com/in/sakukarttunen/'
 const gitHub = 'https://github.com/sakuexe'
 const website = 'https://sakukarttunen.com'
+const currentYear = new Date().getFullYear()
 
 export const commands = {
   banner: {
@@ -17,13 +18,14 @@ export const commands = {
       "             |-|O                         ___       _        _  __         ",
       "             |-(\\,__                     / __| __ _| |___  _| |/ / ",
       "          ...|-|\\--,\\_....'              \\__ \\/ _` | / / || | ' < ",
-      "      ,;;;;;;;;;;;;;;;;;;;;;;;;,.'       |___/\\__,_|_\\_\\\\_,_|_|\\_\\ &copy;2022",
+      `      ,;;;;;;;;;;;;;;;;;;;;;;;;,.'       |___/\\__,_|_\\_\\\\_,_|_|\\_\\ &copy;${currentYear}`,
       '~~,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
       '<span class="text-mutedOrange">Welcome to my interactive terminal.</span>',
       '<span class="text-mutedOrange">For a list of available commands, type <span class="command">"help"</span></span>',
       '<br>',
     ],
   },
+
   help: {
     description: 'List all available commands',
     lines: [
@@ -42,53 +44,65 @@ export const commands = {
       '<br>',
     ],
   },
+  
   whois: {
     description: 'Who is Saku?',
     lines: [
       '<br>',
-      'I am Saku Karttunen and this is my terminal website.',
-      'This website was designed to be a more dev-centered way of',
-      'presenting my skills and portfolio.',
+      'I am Saku Karttunen the developer and designer for this website as well as',
+      'other cool things. I came up with the idea for this website when I was',
+      'learning about Linux and the terminal. (Try some commands)',
       'From here you can find information about my professional career',
-      'experiences, skills and prior works. I am a motivated towards',
-      'becoming a developer in the field of programming.',
+      'experiences, skills and prior works. I hope you enjoy your stay here!',
       '<br>',
       'I am currently studying at the Häme University of Applied Sciences (HAMK)',
+      'My dream job is to work as a fullstack software developer and creating cool things.',
+      'I am creative, calm and I enjoy creating things that are both visually appealing',
+      'and functional. I am always looking for new opportunities to learn and grow.',
       '<br>',
-      'about me:',
-      '- I was born in 2001 and I am currently living in Riihimäki, Finland',
-      '- I enjoy watching Formula 1, playing video games and drawing <span class="text-xs opacity-75">from time to time</span>',
+      'Fun facts about me:',
+      `- I am ${currentYear - 2001} years old and I am currently living in Riihimäki, Finland`,
+      '- I enjoy programming, playing video games and motorsports.',
       '- My favorites:',
-      '   * Color: <span class="text-purple-800">Purple</span>',
-      '   * Programming language === JavaScript',
-      '   * IDE: Visual Studio Code (With the VIM plugin)',
-      '   * Games: Super Smash Brothers, Breath of the Wild and Persona 5 Royal',
+      '   * Color: <span class="text-mutedPurple">Purple</span>',
+      '   * Programming languages: Typescript, C# and Golang',
+      '   * Editor: Neovim (btw)',
       '<br>',
     ],
   },
-  portfiolio: {
+
+  portfolio: {
     description: 'View portfolio',
     lines: [
       '<br>',
       'Want to check out my portfolio from my traditional website?',
-      // `<a href="${website + '/portfolio.html'}" target="_blank">${website}</a>`,
+      `<a href="${website + '/portfolio.html'}" target="_blank">${website}</a>`,
       '<span class="opacity-75">This will open the website on another tab.</span>',
       '<span class="command">(y)</span>es or <span class="command">(n)</span>o?',
       '<br>',
     ],
   },
-  experience: {
+
+  works: {
     description: 'Short list of work experience',
     lines: [
       '<br>',
       'Here are some of my prior work experiences:',
       '<br>',
-      'Freelance Graphic Designer and Web Developer',
+      'Freelance Web Developer & Designer',
       '<span class="italic opacity-75">2019 - current</span>',
       '   - I started my own freelance business to help out small businesses on growing',
       '   their branding and values through visual style of their logos and graphics',
       '   and bringing their content and services to potential clients via websites',
       '   and social media content',
+      '<br>',
+      'Helmiälä Puoti Website Development',
+      '<span class="italic opacity-75">2.2024 - 3.2024</span>',
+      '   - I was hired to develop a website for a small local cafe in Hämeenlinna.',
+      '   The website was built with Django using TailwindCSS and SQLite.',
+      '   The customers were very happy with the result and I was happy to help them.',
+      '   The project was dockerized and deployed to a VPS server. Cloudflare was used',
+      '   for caching, DDOS protection and the SSL certificates.',
       '<br>',
       'Kantolan KunnonSali Web Developer',
       '<span class="italic opacity-75">6.2022 - 7.2022</span>',
@@ -98,14 +112,6 @@ export const commands = {
       '   the previous website was not responsive and honestly looked like it was made in 2005.',
       '   We used Bootstrap 5 and vanilla JavaScript to create the website.',
       '<br>',
-      'Logistics Personnel',
-      '<span class="italic opacity-75">6.2021 - 8.2021</span>',
-      '   - I worked for a small family owned business as a logistics personnel',
-      '   in Riihimäki. I was responsible for driving and delivering the products',
-      '   to the town squares of Hyvinkää, Riihimäki and Hämeenlinna. The business',
-      '   sold mainly fresh berries, vegetables and flowers during summertime.',
-      '   I worked there for the rest of the summer after finishing my mandatory military service.',
-      '<br>',
       'Video and Photographer, Editor',
       '<span class="italic opacity-75">5.2020 - 7.2020</span>',
       '   - I worked as a video and photographer, as well as an editor for',
@@ -113,6 +119,8 @@ export const commands = {
       '   to the June of 2020. First as a part of my meidia studies job-experience',
       '   And then as a full-time job. I worked there for the rest of the summer',
       '   after graduation and before starting my mandatory military service.',
+      '<br>',
+      'Check out <span class="command">socials</span> for my linkedin profile for more information.',
       '<br>',
     ],
   },
@@ -125,10 +133,10 @@ export const commands = {
       'So I will be redirecting you over there for now:',
       `<a href="${gitHub}" target="_blank">github.com/sakuexe</a>`,
       'These projects include things such as:',
-      '- Youtube video downloader, with Python3',
-      '- Personal Websites',
-      '- Some prior school course projects',
-      '- Others',
+      '- Fullstack Web Applications (Django, Dotnet, Node.js)',
+      '- Configuration Files (Dotfiles)',
+      '- Customer Websites',
+      '- School Projects',
       '<br>'
     ],
   },
@@ -175,8 +183,7 @@ export const commands = {
   whoami: {
     lines: [
       '<br>',
-      'Who are you? Wouldn\'t that be a question for yourself?',
-      'In any case, I do appreciate you for visiting my website.',
+      'Who are you? Kind of a deep question to ask a terminal...',
       '<br>',
     ],
   },

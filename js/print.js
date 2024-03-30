@@ -1,23 +1,17 @@
 import { commands } from "./commands.js"
 import { addToHistory } from "./history.js"
+import { delay, getSanitizedInput } from "./utils.js"
 
 const termOutput = document.querySelector('output#stdout')
 
-export async function printOutput(command = {}, cmd = null) {
+export async function printOutput(lines = [], cmd = null) {
   if (cmd) addToHistory(cmd)
-  const lines = command.lines ?? []
   if (lines.length <= 0) {
     // error message
     // sanitize the cmd from code injection or xss
-    const sanitizedCmd = document.createElement("div")
-    sanitizedCmd.innerText = cmd
-    lines.push(`Command for <span class="command">${sanitizedCmd.innerHTML}</span> not found`)
+    const sanitizedCmd = getSanitizedInput(cmd)
+    lines.push(`Command for <span class="command">${sanitizedCmd}</span> not found`)
     lines.push('Try typing <span class="command">help</span> to see available commands')
-  }
-
-  // print command to terminal
-  if (cmd) {
-    termOutput.innerHTML += `<span class="text-mutedPurple">guest@dev.sakukarttunen.com$~</span> <span class="command">${cmd}</span><br>`
   }
 
   // put the output of the command to "stdout"
@@ -35,6 +29,8 @@ export async function printOutput(command = {}, cmd = null) {
 
 export async function printHelp() {
   addToHistory("help")
+  // add a line break before the help for spacing
+  termOutput.appendChild(document.createElement('br'))
   // get the longest command, so the description can be aligned nicely
   const longestCommand = Math.max(...Object.keys(commands).map(command => command.length))
 
@@ -52,20 +48,4 @@ export async function printHelp() {
   }
   // add a line break after the help
   termOutput.appendChild(document.createElement('br'))
-}
-
-export function playSound(sound, volume = 0.5) {
-  /* 
-      plays sound that is passed as argument.
-      e.g. playSound('./.sound/sound.mp3')
-      volume is an optional parameter, default is 0.5
-  */
-  let audio = new Audio(sound)
-  audio.volume = volume
-  audio.play()
-}
-
-const delay = (ms) => {
-  // ms is a number value of how many milliseconds the delay will last
-  return new Promise(resolve => setTimeout(resolve, ms))
 }
