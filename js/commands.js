@@ -167,24 +167,4 @@ export const commands = {
       '<br>',
     ],
   },
-
-  // easter eggs or hidden commands
-
-  sus: {
-    lines: [
-      '<br>',
-      '<span class="text-neutral-600">*    .    ¨    o </span>',
-      '<span class="text-neutral-600">  .    <span class="text-red-600">ඞ</span>    .  ¨ </span',
-      '<span class="text-neutral-600"> ¨    ,       *</span>',
-      '<br>',
-    ],
-  },
-
-  whoami: {
-    lines: [
-      '<br>',
-      'Who are you? Kind of a deep question to ask a terminal...',
-      '<br>',
-    ],
-  },
 }

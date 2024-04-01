@@ -1,6 +1,14 @@
 import { history } from "./history.js";
 import { printOutput } from "./print.js";
-import { getSanitizedInput } from "./utils.js";
+import { getSanitizedInput, playSound } from "./utils.js";
+
+const sus = ['<br>',
+  '<span class="text-neutral-600">*    .    ¨    o </span>',
+  '<span class="text-neutral-600">  .    <span class="text-red-600">ඞ</span>    .  ¨ </span',
+  '<span class="text-neutral-600"> ¨    ,       *</span>',
+  '<br>',
+]
+
 // special functions or easter eggs if you may
 export default async function handleSpecials(stdin) {
   switch (stdin.split(' ')[0]) {
@@ -25,6 +33,15 @@ export default async function handleSpecials(stdin) {
 
     case "history":
       printOutput(history, stdin)
+      break;
+
+    case "sus":
+      printOutput(sus, stdin)
+      playSound('sounds/sus-sound.mp3')
+      break;
+
+    case "whoami":
+      printOutput(['<br/>', 'Who are you? Kind of a deep question to ask a terminal...', '<br/>'], stdin)
       break;
 
     case "reload":
