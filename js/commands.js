@@ -1,3 +1,5 @@
+import { getPortfolioContent } from './getcontent.js'
+
 const instagram = 'https://www.instagram.com/saku.karttunen/'
 const facebook = 'https://www.facebook.com/saku.karttunen.1'
 const linkedIn = 'https://www.linkedin.com/in/sakukarttunen/'
@@ -55,16 +57,10 @@ export const commands = {
       'From here you can find information about my professional career',
       'experiences, skills and prior works. I hope you enjoy your stay here!',
       '<br>',
-      'I am currently studying at the Häme University of Applied Sciences (HAMK)',
-      'My dream job is to work as a fullstack software developer and creating cool things.',
-      'I am creative, calm and I enjoy creating things that are both visually appealing',
-      'and functional. I am always looking for new opportunities to learn and grow.',
-      '<br>',
       'Fun facts about me:',
-      `- I am ${currentYear - 2001} years old and I am currently living in Riihimäki, Finland`,
       '- I enjoy programming, playing video games and motorsports.',
       '- My favorites:',
-      '   * Color: <span class="text-mutedPurple">Purple</span>',
+      '   * Color: Purple',
       '   * Programming languages: Typescript, C# and Golang',
       '   * Editor: Neovim (btw)',
       '<br>',
@@ -75,11 +71,10 @@ export const commands = {
     description: 'View portfolio',
     lines: [
       '<br>',
-      'Want to check out my portfolio from my traditional website?',
-      `<a href="${website}" target="_blank">${website}</a>`,
-      '<span class="opacity-75">This will open the website on another tab.</span>',
-      '<span class="command">(y)</span>es or <span class="command">(n)</span>o?',
+      'Here\'s a sample of my prior works, feel free to check',
+      'more information about them from the links provided below:',
       '<br>',
+      ...(await getPortfolioContent()),
     ],
   },
 
