@@ -38,8 +38,6 @@ export async function printHelp() {
   for (let [key, command] of Object.entries(commands)) {
     // skip commands without description
     if (!command.description) continue
-    // scrolls the window to bottom of page
-    window.scrollBy(0, window.innerHeight)
 
     const helpRow = document.createElement('p')
     helpRow.innerHTML = `<span class="command">${key.padEnd(longestCommand + 5)}</span> ${command.description}`

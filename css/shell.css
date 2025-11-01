@@ -1,0 +1,39 @@
+#stdin input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--color-accent);
+}
+
+#stdin label {
+  color: var(--color-brand);
+}
+
+#stdout p {
+  overflow: hidden;
+  white-space: pre;
+  display: block;
+  animation: typing .7s steps(40, end);
+}
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+
+  to {
+    width: var(--column-width);
+  }
+}
+
+.old-prompt {
+  color: var(--color-brand);
+}
+
+.command {
+  color: var(--color-accent);
+  text-shadow: 0 0 12px var(--color-accent);
+}
+

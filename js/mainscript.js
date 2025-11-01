@@ -12,7 +12,7 @@ function enterCommand() {
   const command = commands[stdin]
 
   const cmd = getSanitizedInput(stdin)
-  termOutput.innerHTML += `<span class="text-mutedPurple">guest@dev.sakukarttunen.com$~</span> <span class="command">${cmd}</span><br>`
+  termOutput.innerHTML += `<span class="old-prompt">guest@dev.sakukarttunen.com$~</span> <span class="command">${cmd}</span><br>`
   termInput.value = ''
 
   if (command === commands.help || stdin === 'man') {
